@@ -62,6 +62,9 @@
 
       var $label = $('<span class="share">Share</span>')
         .appendTo($buttons);
+
+      var $services = $('<span class="services" />')
+        .appendTo($buttons);
       
       var $total_wrap = $('<span class="count total" />')
         .append('<span class="label">Total</span>')
@@ -80,7 +83,7 @@
             .attr('href', service.like_url.replace(/{{url}}/g, options.url))
             .append('<span class="label">'+service.display_name+'</span>')
             .append('<span class="value" />')
-            .insertBefore($total_wrap);
+            .appendTo($services);
             
           var $count = $count_wrap.find('.value');
 
