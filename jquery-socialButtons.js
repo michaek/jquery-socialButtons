@@ -12,13 +12,17 @@
       display_name: 'Facebook',
       data_url: 'http://api.facebook.com/restserver.php?method=links.getStats&format=json-strings&urls={{url}}',
       like_url: 'http://www.facebook.com/plugins/like.php?origin={{url}}&relation=parent.parent&transport=postmessage&font=lucida%20grande&href={{url}}&layout=standard&node_type=link&sdk=joey&show_faces=false',
-      count_key: 'total_count'
+      count_key: 'total_count',
+      window_width: 200,
+      window_height: 80
     },
     twitter: { 
       display_name: 'Twitter',
       data_url: 'http://urls.api.twitter.com/1/urls/count.json?url={{url}}',
       like_url: 'http://twitter.com/share?original_referer={{url}}&url={{url}}',
-      count_key: 'count'
+      count_key: 'count',
+      window_width: 500,
+      window_height: 350
     }
   };
 
@@ -44,6 +48,12 @@
       number = Math.round(number/1000) + 'K';
     }
     return number;
+  }
+  
+  function modal(width, height, src, name) {
+    // i'd rather do this as a modal iframe, but that didn't work immediately
+    console.log("width="+width+",height="+height+",personalbar=0,toolbar=0,scrollbars=1,resizable=1");
+    window.open(src,name,"width="+width+",height="+height+",personalbar=0,toolbar=0,scrollbars=1,resizable=1")
   }
   
   $.fn.socialButtons = function(options){
@@ -84,7 +94,12 @@
             .append('<span class="label">'+service.display_name+'</span>')
             .append('<span class="value" />')
             .appendTo($services);
-            
+
+          $count_wrap.click(function(){
+            modal(service.window_width, service.window_height, $count_wrap.attr('href'), service_name);
+            return false;
+          });
+          
           var $count = $count_wrap.find('.value');
 
           // don't make another request if we already have the stats
