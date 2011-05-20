@@ -106,8 +106,6 @@
                   raw: data
                 };
                 
-                console.log(data);
-                
                 // set count for display
                 $count_wrap.attr('title', count);
                 if (options.friendlyCounts) {
