@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body lang="en">
+  
+  <p><strong>These are ugly, but easily stylable!</strong></p>
+  
+  <hr />
+
+  Social buttons for this URL:
+
+  <div id="current_social"></div>
+  
+  <hr />
+
+  Social buttons for TechCrunch.com:
+
+  <div id="tc_social"></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+
+  <script src="jquery-socialButtons.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    $('#current_social').socialButtons();
+
+    $('#tc_social').socialButtons({
+      url: 'http://techcrunch.com/'
+    });
+  </script>
+
+</body>
+</html>
+
+
+
