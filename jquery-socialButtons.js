@@ -17,7 +17,7 @@
     twitter: { 
       display_name: 'Twitter',
       data_url: 'http://urls.api.twitter.com/1/urls/count.json?url={{url}}',
-      like_url: 'http://twitter.com/share?original_referer={{url}}&url={{url}}&via=',
+      like_url: 'http://twitter.com/share?original_referer={{url}}&url={{url}}',
       count_key: 'count'
     }
   };
