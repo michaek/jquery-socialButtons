@@ -6,14 +6,14 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
- * Modified by Beanow for Tuxion - https://github.com/Tuxion/jquery-socialButtons
+ * Modified by Beanow for Tuxion (2012-05-22)
  * - Improved security by using https.
  * - Encoded urls.
  * - Replaced facebook like popup with sharer window.
  * - Enabled message option.
  * - Enabled label option.
  *
- * Update 2012-09-19
+ * Update by Beanow for Tuxion (2012-09-19)
  * - Added pinterest service (v1).
  * - Added media_url option.
  * - Changed Facebook count from rest api to graph api.
