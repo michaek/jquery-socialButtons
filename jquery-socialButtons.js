@@ -1,22 +1,9 @@
-/*
- * jQuery Social Buttons Plugin v0.1
+/**
+ * jQuery Social Buttons Plugin v0.2
  * https://github.com/michaek/jquery-socialButtons
  * 
- * Copyright (c) 2010 Bearded Studio LLC
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
- * Modified by Beanow for Tuxion (2012-05-22)
- * - Improved security by using https.
- * - Encoded urls.
- * - Replaced facebook like popup with sharer window.
- * - Enabled message option.
- * - Enabled label option.
- *
- * Update by Beanow for Tuxion (2012-09-19)
- * - Added pinterest service (v1).
- * - Added media_url option.
- * - Changed Facebook count from rest api to graph api.
+ * Copyright (c) 2012 Michael Hellein
+ * Licensed under the MIT license. http://jquery.org/license
  */
 (function($, undefined){
   var services = {
