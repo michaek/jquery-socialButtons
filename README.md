@@ -1,3 +1,5 @@
+## Psst. You should probably use [SocialCount](https://github.com/filamentgroup/SocialCount/) instead.
+
 Inspired by http://dribbble.com/shots/151761-Share-this-v2, this plugin can be used by calling:
 
     $('#selector').socialButtons({
